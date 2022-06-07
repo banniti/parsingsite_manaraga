@@ -16,7 +16,7 @@ for item in all_products_hrefs:
     item_href = "https://ekb.manaraga.ru" + item.find("p").find("a").get("href")
 
 #     print(item_text, "===", price, "===", item_href)
-    with open("catalog.csv", "a", encoding="utf-8") as file:
+    with open("catalog.csv", "a", newline='', encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(
             [
